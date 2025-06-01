@@ -7,7 +7,7 @@ const {
   updateJournal,
   deleteJournal,
   curhatAi
-} = require('../controller/JournalController');
+} = require('../controller/JournalController.js');
 
 
 router.get('/', getAllJournals);
