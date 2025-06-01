@@ -27,7 +27,7 @@ exports.createJournal = (req, res) => {
     const { title, content , category } = req.body;
     const data = loadData();
 
-    if(!['work','diary','study ','travel','schedule','other'].includes(category)){
+    if(!['work','diary','study','travel','schedule','other'].includes(category)){
         return res.status(404).json({ message : "Category Invalid"});
     }
 
