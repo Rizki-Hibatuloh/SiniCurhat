@@ -1,26 +1,15 @@
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import Navbar from "./components/Navbar";
-import Home from "./pages/Home";
-import Journal from "./pages/Journal";   
-import CurhatAI from "./pages/CurhatAI"; 
 
+import EntryForm from './components/EntryForm';
+import EntryList from './components/EntryList';
+import CurhatAI from './components/CurhatAI';
 
-function App() {
+export default function App() {
   return (
-    <Router>
-      <div className="min-h-screen flex flex-col">
-        <Navbar />
-        <main className="flex-grow p-4">
-          <Routes>
-            <Route path="/" element={<Home />} />
-            <Route path="/journal" element={<Journal />} />
-            <Route path="/curhat" element={<CurhatAI />} />
-          </Routes>
-        </main>
-        <Footer />
-      </div>
-    </Router>
+    <div className="max-w-2xl mx-auto p-4">
+      <h1 className="text-2xl font-bold mb-4">My Journal</h1>
+      <EntryForm />
+      <CurhatAI />
+      <EntryList />
+    </div>
   );
 }
-
-export default App;

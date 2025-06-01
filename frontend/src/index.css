@@ -1,3 +1,12 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@font-face {
+  font-family: 'ComicNeue';
+  src: url('../assets/fonts/ComicNeue-Regular.ttf') format('truetype');
+}
+
+body {
+  font-family: 'ComicNeue', cursive;
+}
