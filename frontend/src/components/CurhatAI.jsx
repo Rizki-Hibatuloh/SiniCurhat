@@ -30,10 +30,12 @@ export default function CurhatAI() {
     setErrorMessage("");
 
     try {
-      const response = await getCurhatAIResponse(userInput);
+      const data = await getCurhatAIResponse(userInput);
+      const responseText = data?.response || "Maaf, AI tidak merespons 😥"; // ✅ Pastikan ambil teksnya saja
+
       setChat([
         ...newChat,
-        { sender: "ai", text: response },
+        { sender: "ai", text: responseText },
       ]);
     } catch (err) {
       console.error("AI Error:", err);
