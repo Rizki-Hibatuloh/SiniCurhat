@@ -1,16 +1,26 @@
-import './App.css'
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import Navbar from "./components/Navbar";
+import Home from "./pages/Home";
+import Journal from "./pages/Journal";   
+import CurhatAI from "./pages/CurhatAI"; 
+
 
 function App() {
- 
-
   return (
-    <>
-       <div className="text-center p-10">
-      <h1 className="text-4xl font-bold text-blue-600">TailwindCSS Aktif! 🚀</h1>
-      <p className="text-gray-600 mt-4">Sekarang kamu bisa mulai ngoding frontend-nya 😎</p>
-    </div>
-    </>
-  )
+    <Router>
+      <div className="min-h-screen flex flex-col">
+        <Navbar />
+        <main className="flex-grow p-4">
+          <Routes>
+            <Route path="/" element={<Home />} />
+            <Route path="/journal" element={<Journal />} />
+            <Route path="/curhat" element={<CurhatAI />} />
+          </Routes>
+        </main>
+        <Footer />
+      </div>
+    </Router>
+  );
 }
 
-export default App
+export default App;
