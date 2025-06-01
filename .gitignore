@@ -1,0 +1,31 @@
+# Backend dependencies
+/backend/node_modules/
+
+# Frontend dependencies
+/frontend/node_modules/
+
+# Build folders 
+/backend/dist/
+/frontend/dist/
+/frontend/build/
+/backend/build/
+
+# Environment variables
+/backend/.env
+/frontend/.env
+
+# Logs
+*.log
+npm-debug.log*
+
+# OS/Editor Files
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+
+# Tailwind JIT cache
+/frontend/.tailwind/
+
+# Test coverage 
+coverage/
